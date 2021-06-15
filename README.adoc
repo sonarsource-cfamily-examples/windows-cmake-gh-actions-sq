@@ -6,7 +6,7 @@ To build the code run:
 ----
 mkdir build && cd build
 cmake ..
-msbuild sonar_scanner_example.sln
+msbuild sonar_scanner_example.vcxproj
 ----
 
 = Code Description
