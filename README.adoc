@@ -1,3 +1,22 @@
+= C++ example project scanned on SonarCloud using GitHub Actions
+
+It is very easy to analyze a C/C++/Objective-C project with SonarQube:
+
+. Create a `sonar-project.properties` file to store your configuration
+. In your `.github/workflows/build.yml` file:
+.. Download the https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/[Sonar Scanner]
+.. Download the https://docs.sonarqube.org/latest/analysis/languages/cfamily/#header-4[Build Wrapper]
+.. Wrap your compilation with the Build Wrapper
+.. Run `sonar-scanner` as the final step
+. Make sure that you have your token stored as a secret in your repository (`SONAR_TOKEN`). If you don't have a token yet, you can generate a new one in SonarQube (see https://docs.sonarqube.org/latest/user-guide/user-token/[Generating and Using Tokens]).
+
+You can take a look at the link:sonar-project.properties[sonar-project.properties] and link:.github/workflows/build.yml[build.yml] to see it in practice.
+
+= Documentation
+
+- https://docs.sonarqube.org/latest/analysis/languages/cfamily/[Documentation of the C/C++/Objective-C plugin and its Build Wrapper]
+- https://docs.sonarqube.org/latest/analysis/github-integration/[GitHub Integration in SonarQube]
+
 = Windows\CMake
 
 A build of the https://github.com/sc-sq-c-family-examples/code[code repository] on Windows platform using CMake build system.
