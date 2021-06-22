@@ -4,7 +4,7 @@ It is very easy to analyze a C/C++/Objective-C project with SonarQube:
 
 . Create a `sonar-project.properties` file to store your configuration
 . In your `.github/workflows/build.yml` file:
-.. Set the environment variable `SONAR_SERVER_URL` to your server url (eg: http://localhost:9000)
+.. Set the environment variable `SONAR_SERVER_URL` to your server url (e.g.: https://example.com:9000)
 .. Download the https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/[Sonar Scanner]
 .. Download the https://docs.sonarqube.org/latest/analysis/languages/cfamily/#header-4[Build Wrapper]
 .. Wrap your compilation with the Build Wrapper
