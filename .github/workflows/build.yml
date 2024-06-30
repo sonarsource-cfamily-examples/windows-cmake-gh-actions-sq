@@ -31,5 +31,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }} # Put the name of your token here
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} # SonarQube URL is stored in a GitHub secret
-        run: |
-          sonar-scanner --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}"
+        run:
+          sonar-scanner --define sonar.cfamily.compile-commands="${{ env.BUILD_WRAPPER_OUT_DIR }}/compile_commands.json"
+          # if you are using using sonarqube 10.5 or earlier, replace sonar.cfamily.compile-commands with sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}"
+          # as build-wrapper does not generate a compile_commands.json file before sonarqube 10.6
