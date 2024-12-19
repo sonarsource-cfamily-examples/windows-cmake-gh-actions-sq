@@ -25,7 +25,7 @@ jobs:
         run: |
           New-Item -ItemType directory -Path build
           cmake -S . -B build
-          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
+          build-wrapper-win-x86-64.exe --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
